@@ -14,7 +14,7 @@
 - hosts: localhost
   connection: local
 # - hosts: smrt_analysis_hosts
-  sudo: yes
+  become: yes
   roles:
     - smrt_analysis
   tags: smrt_analysis
