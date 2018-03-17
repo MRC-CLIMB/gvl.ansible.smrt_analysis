@@ -46,7 +46,7 @@
 - name: Stops any running SMRT daemons
   command: "{{ SMRT_ROOT }}/admin/bin/{{ item }} stop"
   become: yes
-  sudo_user: "{{ SMRT_USER }}"
+  become_user: "{{ SMRT_USER }}"
   with_items:
     - smrtportald-initd
     - kodosd.in
