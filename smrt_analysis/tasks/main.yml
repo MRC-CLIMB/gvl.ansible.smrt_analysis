@@ -40,7 +40,7 @@
     - "{{ smrt_analysis_package }}"
     - "{{ smrt_analysis_patch }}"
   register: result
-  until: result|success
+  until: result is success
   retries: 1
 
 - name: Stops any running SMRT daemons
